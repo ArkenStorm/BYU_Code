@@ -1,0 +1,62 @@
+Expression: ( 43 + 2 ) * 19
+     Infix: ( 43 + 2 ) * 19 
+   Postfix: 43 2 + 19 * 
+    Prefix: * + 43 2 19 
+     Value: 855
+
+Expression: ( 43 + 2 ] * 19
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: ( 43 + + 2 ) * 19
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: ( 43 + + 2 * 19
+     Infix: Caught exception: NOT Infix: Unbalanced
+
+Expression: [ ( 1 - 2 ) / 3 * ( 4 + 5 - 6 / 7 ) ]
+     Infix: [ ( 1 - 2 ) / 3 * ( 4 + 5 - 6 / 7 ) ] 
+   Postfix: 1 2 - 3 / 4 5 + 6 7 / - * 
+    Prefix: * / - 1 2 3 - + 4 5 / 6 7 
+     Value: 0
+
+Expression: { { 2 + 4 }
+     Infix: Caught exception: NOT Infix: Unbalanced
+
+Expression: 4 * ( 2 + 4 - ( 2 + ) ) - 4 / 5
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 4 * ( 2 * + 4 - ( 2 + 2 ) ) - 4 / 5
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: ( 3 + 5 - ( 4 + 2 ) }
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: { 2 + [ 3 * 4 ) / 2 }
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: 3 % { 7 - ( 2 / [ 5 - 81 ] } + 1 )
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: { 4
+     Infix: Caught exception: NOT Infix: Unbalanced
+
+Expression: 15 }
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: ( 8 }
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: ( 1 * { 5 - { 7 - 3 } }
+     Infix: Caught exception: NOT Infix: Unbalanced
+
+Expression: 3 + } { 4
+     Infix: Caught exception: NOT Infix: Paren Mis-match
+
+Expression: 2 ( + 3 - 7 )
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 2 ( * 3 - 7 )
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 15 + ( 9 - 2 - ) 5
+     Infix: Caught exception: NOT Infix: Missing Operands

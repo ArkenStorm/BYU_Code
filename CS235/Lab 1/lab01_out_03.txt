@@ -1,0 +1,38 @@
+Exam Averages:
+Exam  1 average =88.5    0(A)    5(B)    3(C)    4(D)    1(E)
+Exam  2 average =81.1    1(A)    4(B)    3(C)    5(D)    0(E)
+Exam  3 average =82.5    3(A)    1(B)    2(C)    7(D)    0(E)
+Exam  4 average =89.3    0(A)    7(B)    1(C)    3(D)    2(E)
+Exam  5 average =89.5    0(A)    6(B)    2(C)    3(D)    2(E)
+
+Student Exam Grades:
+         Alan Turing    81(D)   100(A)   100(A)    99(B)    65(E)
+     Tim Berners-Lee   100(B)    96(B)    70(D)    81(D)    72(E)
+        Grace Hooper   100(B)    67(D)    71(D)    68(E)    94(C)
+        Donald Knuth    78(D)    82(C)    73(D)    76(D)   100(B)
+          Larry Page   100(B)    82(C)    82(C)   100(B)   100(B)
+         Sergey Brin    77(D)    89(B)    76(D)    77(D)   100(B)
+        Ada Lovelace   100(B)    67(D)   100(A)   100(B)   100(B)
+     Charles Babbage    88(C)    77(C)    79(C)    86(C)    89(C)
+      Barbara Liskov    91(C)    69(D)    77(D)   100(B)    77(D)
+     Mark Zuckerburg    86(C)    94(B)    74(D)   100(B)   100(B)
+          Bill Gates    99(B)    92(B)   100(A)   100(B)    84(D)
+        Brendan Eich    83(D)    72(D)    74(D)    74(E)    82(D)
+         Hedy Lamarr    67(E)    67(D)    96(B)   100(B)   100(B)
+
+**BONUS**
+Class Average = 86.2
+Student Final Exam Grade:
+         Alan Turing  89.0(C)
+     Tim Berners-Lee  83.8(C)
+        Grace Hooper  80.0(D)
+        Donald Knuth  81.8(C)
+          Larry Page  92.8(B)
+         Sergey Brin  83.8(C)
+        Ada Lovelace  93.4(B)
+     Charles Babbage  83.8(C)
+      Barbara Liskov  82.8(C)
+     Mark Zuckerburg  90.8(C)
+          Bill Gates  95.0(B)
+        Brendan Eich  77.0(D)
+         Hedy Lamarr  86.0(C)

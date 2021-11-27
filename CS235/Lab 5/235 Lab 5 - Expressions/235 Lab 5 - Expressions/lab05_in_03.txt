@@ -1,0 +1,10 @@
+Expression: 3 $ 3
+Expression: -
+Expression: 21 +
+Expression: + 7 1
+Expression: 4 % 2 -
+Expression: * 5
+Expression: 12 7 /
+Expression: 3 5 * 2 +
+Expression: 43 + 2 * 19 +
+Expression: 1 * ( 2 + 3 ) / % 4

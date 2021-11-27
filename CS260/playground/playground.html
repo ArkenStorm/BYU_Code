@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="playground.css">
+    </head>
+    <body>
+        <p>Run Fizzbuzz: <a onclick="fizzbuzz()">Run!</a></p>
+        <p>Take the minimum of 2 numbers: <a onclick="takeMin()">Input 2 numbers</a></p>
+        <hr>
+        <h1>Mountains</h1>
+        <div id="mountains"></div>
+        <hr>
+        <form>
+            Enter a Utah City: <input type="text" id="cityField" value=""><br>
+            Suggestion: <span id="txtHint">Empty</span>
+            <input id="weatherButton" type="submit" value="Submit">
+        </form>
+        <hr>
+        <h1>Github IDs</h1>
+        <form id="userform">
+            <input id="user">
+            <input type="submit" value="Go">
+        </form>
+        <div id="github"></div>
+        
+        
+        <script src="playground.js"></script>
+        <script>
+        /* global fetch */
+            document.getElementById("cityField").addEventListener("keyup", function(event) {
+            event.preventDefault();
+            const url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=" + document.getElementById("cityField").value;
+            fetch(url)
+            .then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                var everything;
+                everything = "<ul>";
+                for (let i = 0; i < json.length; i++) {
+                    everything += "<li> " + json[i].city;
+                };
+                everything += "</ul>";
+                document.getElementById("txtHint").innerHTML = everything;
+                });
+            });
+        </script>
+        
+        <script>
+        document.getElementById("userform").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var id = document.getElementById("user").value;
+            console.log("id is",id);
+            var fullURL = "https://api.github.com/users/" + id;
+            console.log(fullURL);
+            fetch(fullURL)
+            .then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                console.log(json);
+                document.getElementById("github").innerHTML = 
+                "<strong>ID= "+json["id"]+"</strong>";
+            });
+        });    
+        </script>
+        
+        <script>
+            const MOUNTAINS = [
+                {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+                {name: "Everest", height: 8848, place: "Nepal"},
+                {name: "Mount Fuji", height: 3776, place: "Japan"},
+                {name: "Vaalserberg", height: 323, place: "Netherlands"},
+                {name: "Denali", height: 6168, place: "United States"},
+                {name: "Popocatepetl", height: 5465, place: "Mexico"},
+                {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+            ];
+          
+            let table = document.createElement('table');
+            let row = document.createElement('tr');
+            Object.keys(MOUNTAINS[0]).forEach(function(key) {
+            let th = document.createElement('th');
+            th.innerHTML = key;
+            row.appendChild(th);
+            });
+            table.appendChild(row);
+            MOUNTAINS.forEach(function(mountain) {
+                row = document.createElement('tr');
+                Object.values(mountain).forEach(function(value) {
+                    let td = document.createElement('td');
+                    td.appendChild(document.createTextNode(value));
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            });
+          
+            document.getElementById('mountains').appendChild(table);
+        </script>
+    </body>
+</html>

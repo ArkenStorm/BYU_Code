@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Lab 4 - Node</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="cityREST">
+      <div class="citySearch">
+        <img src="/images/utah.jpg" class="cityImage">
+        <div>
+          <h1>Select a City:</h1>
+          <form v-on:keyup.prevent="fetchREST">
+            <input type="text" v-model="prefix">
+          </form>
+        </div>
+      </div>
+      
+      <ul>
+        <li v-for="item in cities">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="owlAPI">
+      <div class="owlSearch">
+        <div>
+          <h1>Owlbot Search:</h1>
+          <form v-on:submit.prevent="owlProxy">
+            <input type="text" v-model="owlprefix">
+            <input type="submit">
+          </form>
+        </div>
+        <img src="/images/owl.jpg" class="owlImage">
+      </div>
+      
+      <div v-for="(object, index) in results">
+        Definition {{index+1}}
+        <p>Type: {{object.type}}</p>
+        <p>Definition: {{object.defenition}}</p>
+        <p>Example: {{object.example}}</p>
+        <hr>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="footer">
+      <p class="footer-text">GitHub repository:
+          <a href="https://github.com/BYUCS260/lab-4-node-ArkenStorm">Lab 4 - Node</a>
+      </p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+
+</html>

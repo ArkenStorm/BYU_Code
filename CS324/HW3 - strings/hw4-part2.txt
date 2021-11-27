@@ -1,0 +1,17 @@
+Function 1: The "==" operator does not compare strings, since strings in c are simply char arrays. It would instead be comparing the pointer values.
+	Using strcmp() and comparing that result to zero fixed the issue.
+	
+Function 2: The "=" operator just changes the pointer, not the value.
+	Using strcpy() fixes the issue.
+	
+Function 3: The new string was declared within the function scope only, so the memory for it becomes invalid once the function returns.
+	strdup() takes care of this and returns a pointer to a copy of the string.
+	
+Function 4: Again the new string was declared only in the function scope, and the sizeof(array) was only getting the size of the pointer.
+	Passing in the size of the array from main and malloc-ing the memory fixed the issue.
+	
+Function 5: str[begin] will dereference the pointer and give the value at that location, instead of a pointer to that location.
+	Doing &str[begin] or str + begin instead will fix the issue.
+	
+Function 6: strtok modifies the string, which is not allowed.
+	Copying the string using our previously defined method and tokenizing that will fix the issue. 

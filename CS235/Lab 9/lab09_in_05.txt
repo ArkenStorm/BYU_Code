@@ -1,0 +1,64 @@
+Pokemon:
+Bayleaf grass
+Typhlosion fire
+Totodile water
+Natu psychic
+Steelix steel
+Scizor bug
+Tyranitar rock
+Ho-oh flying
+Umbreon dark
+Hitmontop fighting
+Misdreavus ghost
+Crobat poison
+
+Moves:
+triple_kick fighting
+magical_leaf grass
+inferno fire
+night_shade ghost
+psybeam psychic
+iron_tail steel
+dark_pulse dark
+ariel_ace flying
+stone_edge rock
+hydro_pump water
+fury_cutter bug
+poison_fang poison
+
+Effectivities:
+grass: water ground rock
+fire: grass ice bug steel
+water: fire ground rock
+psychic: fighting poison
+steel: rock
+bug: grass psychic dark
+rock: fire flying bug
+flying: grass fighting bug
+dark: psychic ghost
+fighting: rock dark steel
+ghost: psychic ghost
+poison: grass
+
+Ineffectivities:
+grass: flying poison bug steel fire grass
+fire: rock fire water
+water: water grass
+psychic: steel psychic dark
+steel: steel fire water
+bug: fighting flying poison ghost steel fire
+rock: fighting steel
+flying: rock steel
+dark: fighting dark
+fighting: flying poison bug psychic
+ghost: dark
+poison: poison rock ghost steel
+
+Battles:
+Natu: psybeam Tyranitar: iron_tail
+Scizor: fury_cutter Typhlosion: inferno
+Bayleaf: magical_leaf Totodile: hydro_pump
+Umbreon: dark_pulse Crobat: ariel_ace
+Misdreavus: psybeam Hitmontop: triple_kick
+Ho-oh: inferno Steelix: stone_edge
+Misdreavus: night_shade Scizor: poison_fang

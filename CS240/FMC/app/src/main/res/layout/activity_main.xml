@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:id="@+id/FragmentMount"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                  app:behavior_peekHeight="30dp"
+                  android:background="@color/colorAccentDark"
+                  android:orientation="vertical"
+                  android:id="@+id/serverSettings">
+        <TextView android:layout_width="match_parent" android:layout_height="30dp"
+                  android:gravity="center"
+                  android:background="@color/colorAccentDark"
+                  android:textColor="@color/colorPrimaryText"
+                  android:textStyle="bold"
+                  android:text="@string/server_settings"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorPrimaryText"
+                    android:inputType="text"
+                    android:text="@string/ip_address"
+                    android:id="@+id/serverHost"
+                    android:hint="@string/server_host"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorPrimaryText"
+                    android:inputType="text"
+                    android:text="@string/port_number"
+                    android:id="@+id/serverPort"
+                    android:hint="@string/server_port"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

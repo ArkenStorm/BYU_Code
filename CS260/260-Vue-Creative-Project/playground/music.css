@@ -1,0 +1,106 @@
+.album-cover {
+    display: flex;
+    flex-flow: wrap;
+    padding: 0.5rem;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+    box-shadow: 0px 0.5px 1px black;
+    background-color: black;
+}
+
+.album-thumbnail {
+    border: 3px solid black;
+    margin-top: 40px;
+    background-color: black;
+    width: 70px;
+    height: 70px;
+}
+
+.selected-album {
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+}
+
+.album-title {
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.album-song-list {
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.album-details {
+    display: flex;
+    flex-flow: wrap;
+    margin-left: 20px;
+}
+
+.list-thumbnail {
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.list-title {
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-right: 7px;
+    font-weight: bold;
+}
+
+.list-element {
+    display: flex;
+    flex-flow: wrap space-between;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #1C3D5A;
+    color: #8795A1;
+    border: 1px solid #3D4852;
+}
+
+.album-selection {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.activeSelection {
+    background-color: #38A89D;
+    color: black;
+}
+
+.song-link {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-bottom: 0px;
+    background-color: black;
+    border: 20px solid black;
+}
+
+.song-list-element {
+    display: flex;
+    flex-flow: wrap space-between;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #1C3D5A;
+    color: #8795A1;
+    border: 1px solid #3D4852;
+}
+
+.activeSongListElement {
+    background-color: #38A89D;
+    color: black;
+}

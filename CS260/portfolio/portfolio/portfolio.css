@@ -1,0 +1,40 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    border-style: solid;
+    border-color: green;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    width: 100px;
+}
+
+nav a {
+    width: 75%;
+}
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.active {
+    background-color: darkblue;
+    color: white;
+}
+
+section {
+    display: flex;
+}
+
+aside {
+    flex: 1
+}
+
+article {
+    flex: 4
+}

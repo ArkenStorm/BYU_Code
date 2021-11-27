@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Lab 4 - Node</title>
+</head>
+
+<body>
+  <div id="app" class="mainApp">
+    <div class="title"><img class="logo" src="/images/spotifylogo.jpg"><h1>Spotify API</h1></div>
+    <div class="searchWrapper">
+        Search: <input v-model="searchParams" type="text">
+        <div>
+        <button @click="searchSongs">Songs</button>
+        <button @click="searchArtists">Artists</button>
+        </div>
+    </div>
+    
+    <div class="searchWrapper">
+      <div class="glorySwitch">
+        <h2>For Glory?</h2>
+        <label class="switch">
+          <input v-model="forGlory" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <button @click="hammerCheck">Hammertime!</button>
+    </div>
+    
+     <ul v-if="trackSearch">
+         <li v-for="song in songs">
+           <a :href="song.preview_url">{{ song.name }}</a>
+        </li>
+        
+    </ul>
+    <ul v-else>
+      <li v-for="artist in artists">
+        <a href="artist.preview_url">{{ artist.name }}</a>
+      </li>
+    </ul>
+    
+  </div>
+  
+  <div class="footer">
+      <p class="footer-text">GitHub repository:
+          <a href="https://github.com/ArkenStorm/Node-Creative-Project">Node Creative Project</a>
+      </p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

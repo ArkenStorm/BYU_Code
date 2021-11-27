@@ -1,0 +1,58 @@
+Pokemon:
+Charmander fire
+Bulbasaur grass
+Squirtle water
+Pikachu electric
+Machoke fighting
+Pidgeotto flying
+Dugtrio ground
+Geodude rock
+Articuno ice
+Snorlax normal
+
+Moves:
+flamethrower fire
+brick_break fighting
+razor_leaf grass
+tackle normal
+spark electric
+quick_attack normal
+water_gun water
+ice_beam ice
+karate_chop fighting
+rock_slide rock
+air_slash flying
+earthquake ground
+body_slam normal
+
+Effectivities:
+fighting: rock ice normal
+flying: fighting grass
+ground: rock fire electric
+rock: flying fire ice
+fire: grass ice
+water: ground rock fire
+grass: ground rock water
+electric: flying water
+ice: flying ground grass
+normal:
+
+Ineffectivities:
+fighting: flying
+flying: rock electric
+ground: flying grass
+rock: fighting ground
+fire: rock fire water
+water: water grass
+grass: flying fire grass
+electric: ground grass electric
+ice: fire water ice
+normal: rock
+
+Battles:
+Charmander: flamethrower Squirtle: water_gun
+Snorlax: body_slam Pidgeotto: air_slash
+Bulbasaur: razor_leaf Geodude: rock_slide
+Pikachu: spark Dugtrio: earthquake
+Articuno: air_slash Charmander: flamethrower
+Articuno: water_gun Squirtle: ice_beam

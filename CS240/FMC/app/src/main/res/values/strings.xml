@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FMC</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="server_host">Server Host</string>
+    <string name="server_port">Server Port</string>
+    <string name="server_settings">Server Settings</string>
+    <string name="ip_address">192.168.100.217</string>
+    <string name="port_number">8080</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender:</string>
+    <string name="email">Email</string>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyDZIO7_3W9mZLOgvwbr3bXZqOYCaGpqqwo
+    </string>
+    <string name="initial_select_message">Click on a marker to see event details</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="lifeEvents">Life Events</string>
+    <string name="family">Family</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

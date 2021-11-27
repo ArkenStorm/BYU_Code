@@ -1,0 +1,39 @@
+1. What design principles does this code violate?
+    The DRY principle (don't repeat code)
+2. Refactor the code to improve its design.
+
+
+private int validateProperty(Properties props, String property, String errorMessage) throws MissingPropertiesException {
+    String valueString = props.getProperty(property);
+    if (valueString == null) {
+        throw new MissingPropertiesException(errorMessage);
+    }
+    return Integer.parseInt(valueString);
+}
+
+private int validateValue(int value, String property, boolean modInterval, int interval = 0) throws MissingPropertiesException {
+    if (value <= 0) {
+        throw new MissingPropertiesException(property + " > 0");
+    }
+    if (modInterval == true) {
+        if ((value % interval) != 0) {
+            throw new MissingPropertiesException(property + " % checkInterval");
+        }
+    }
+    return value;
+}
+
+public void getTimes(Properties props) throws Exception {
+  String valueString;
+  int value;
+
+  value = validateProperty(props, "interval", "monitor interval");
+  checkInterval = validateValue(value, "monitor interval", false);
+
+  value = validateProperty(props, "duration", "duration");
+  monitorTime = validateValue(value, "duration", true, checkInterval);
+
+  value = validateProperty(props, "departure", "departure offset");
+  departureOffset = validateValue(value, "departure", true, checkInterval);
+}
+

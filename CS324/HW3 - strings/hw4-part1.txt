@@ -1,0 +1,9 @@
+1) s2, a1, a2, a3, a4
+
+2) s1, e1
+
+3) s1, s2, a1, a2, a3, a4, c1, c2, d1
+
+4) All of the arrays can be used as arguments to memcpy and memcmp, they are all char*.
+
+5) s1 & s2, s1 & a1, c1 & c2, s1 & d1, s1 & e1

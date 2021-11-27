@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Midterm 2</title>
+</head>
+
+<body>
+  <div id="admin">
+    <h1 class="heading">Store Management Interface</h1>
+    <div class="inputForm">
+      <div>Product Name <input type="text" v-model="productName" class="adminInput"></div>
+      <div>Price <input type="text" v-model="productPrice" class="adminInput"></div>
+      <div>Picture URL <input type="text" v-model="pictureURL" class="adminInput"></div>
+      <button @click="addProduct">Add Product</button>
+    </div>
+    
+    <h1 class="heading">Current Products</h1>
+    <div v-for="product in products" class="listItem">
+      <button @click="deleteProduct(product)" class="deleteButton">X</button>{{product.name}} - price {{product.price}} - ordered {{product.numOrdered}}<img :src="product.imageURL" class="image">
+    </div>
+    
+    <div class="footer">
+      <a href="index.html">Back to Home</a>
+    </div>
+    
+    <div class="gitfooter">
+      <p class="footer-text">GitHub repository:
+          <a href="https://github.com/BYUCS260/midterm-2-ArkenStorm">Midterm 2</a>
+      </p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/admin.js"></script>
+</body>
+
+</html>

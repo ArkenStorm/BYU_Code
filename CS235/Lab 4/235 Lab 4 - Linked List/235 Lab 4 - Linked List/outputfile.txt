@@ -1,0 +1,60 @@
+STRING [STRING]
+size 0
+printList 
+at 0 
+at 1 
+insertTail lazy true
+size 1
+printList lazy
+insertHead lazy false
+size 1
+printList lazy
+insertAfter dog. lazyy false
+size 1
+printList lazy
+insertAfter dog. lazy false
+size 1
+printList lazy
+insertTail dog. true
+size 2
+printList lazy dog.
+insertHead fox true
+size 3
+printList fox lazy dog.
+insertHead brown true
+size 4
+printList brown fox lazy dog.
+insertHead quick true
+size 5
+printList quick brown fox lazy dog.
+insertHead The true
+size 6
+printList The quick brown fox lazy dog.
+insertAfter quick brown false
+size 6
+printList The quick brown fox lazy dog.
+insertTail fox false
+size 6
+printList The quick brown fox lazy dog.
+insertAfter the fox false
+size 6
+printList The quick brown fox lazy dog.
+insertAfter jumps fox false
+size 6
+printList The quick brown fox lazy dog.
+insertAfter over jumps false
+size 6
+printList The quick brown fox lazy dog.
+size 6
+printList The quick brown fox lazy dog.
+at 0 The
+at 1 quick
+at 2 brown
+at 3 fox
+at 4 lazy
+at 5 dog.
+at 6 
+at 7 
+at 8 
+at 9 
+at -1 

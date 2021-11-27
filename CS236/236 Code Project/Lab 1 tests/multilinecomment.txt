@@ -1,0 +1,12 @@
+# this is a multiline comment
+#||##||#4
+
+#| stuff
+# like
+this
+# should
+# count
+# as
+# one
+# comment
+|#

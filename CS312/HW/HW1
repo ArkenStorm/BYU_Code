@@ -1,0 +1,32 @@
+Taylor Whitlock, HW #1
+
+1a. f = Θ(g)
+1b. f = O(g)
+1c. f = O(g)
+1d. f = Θ(g)
+1e. f = Θ(g)
+1f. f = Θ(g)
+1m. f = O(g)
+
+2a,b,c. I tried for at least an hour to figure this out. I got practically nowhere.
+
+3a.
+
+def fab1(n):
+	if n == 0 or n == 1 or n == 2:
+		return 1
+	return fab1(n-1) + fab1(n-2) * fab1(n-3)
+	
+f(n) = O(3^n) time complexity and f(n) = O(n) space complexity; There will be three branches for every "level" of function calls,
+and there are n levels. Therefore it will have space complexity of O(n) and O(3^n) time complexity.
+
+*********
+
+3b.
+
+def fab2(n):
+	a,b,c = 1,1,1
+	if n == 0 or n == 1 or n == 2:
+		return 1
+	for i in range(3, n):
+		a,b,c = c+b*a, 

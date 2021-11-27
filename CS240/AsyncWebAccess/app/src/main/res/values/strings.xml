@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Async Web Access</string>
+    <string name="downloadButton">DOWNLOAD</string>
+    <string name="downloadSizeEmptyLabel">Total Size:</string>
+    <string name="downloadSizeLabel">Total Size: %d</string>
+</resources>

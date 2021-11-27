@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    background-attachment: fixed;
+    background-image: url('/260-Creative-2/images/Ugin.jpg');
+}
+
+h1 {
+    text-align: center;
+}
+
+.searchTerms {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchTerms > div > div {
+    margin: 5px 0 5px 0;
+}
+
+.searchDisplay {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.formDisplay {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: white;
+    background-color: #2f3640;
+    border-radius: 10px;
+    padding: 10px 50px 10px 50px;
+    margin-left: 50px;
+    max-height: 449px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.cardDisplay {
+    flex: 4;
+    text-align: center;
+    max-height: 750px;
+    overflow-y: auto;
+    background-color: #2f3640;
+    color: white;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 50px;
+    padding: 0 20px 10px 20px;
+}
+
+.cardList {
+    border: solid 1px rgba(220, 221, 225,.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+    padding-right: 10px;
+    max-height: 90%;
+}
+
+.singleCard {
+    margin: 5px 0 5px 0;
+}
+
+#searchButton {
+    margin-top: 5px;
+}
+
+#confirm {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin: 20px 0 0 -5px;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+.footer a:visited {
+    color: #40739e;
+}

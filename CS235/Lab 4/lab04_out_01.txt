@@ -1,0 +1,16 @@
+
+INT [INT]
+insertHead 1 true
+insertTail 2 true
+insertAfter 3 2 false
+size 2
+printList 1 2
+insertHead 0 true
+insertTail 4 true
+insertAfter 0 50 true
+insertAfter 50 51 true
+size 6
+printList 0 50 51 1 2 4
+size 6
+insertHead 1000 true
+size 7

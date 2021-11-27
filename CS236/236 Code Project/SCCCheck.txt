@@ -1,0 +1,19 @@
+Schemes:
+bob(x)
+jim(x)
+joe(x)
+sue(x)
+
+Facts:
+joe('4').
+jim('2').
+bob('1').
+sue('5').
+
+Rules:
+bob(x) :- sue(x).
+jim(x) :- bob(x),joe(x).
+joe(x) :- jim(x).
+
+Queries:
+bob(x)?

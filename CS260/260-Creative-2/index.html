@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="mtg.css" />
+        <title>MTG API</title>
+    </head>
+    <body>
+        <h1>MTG API</h1>
+        <div id="app" class="searchDisplay">
+            <form action="#" class="formDisplay">
+                <div class="searchTerms">
+                    <div class="fields">
+                        <div>Card Name: </div>
+                        <div>Mana Cost: </div>
+                        <div>Colors: </div>
+                        <div>Supertypes: </div>
+                        <div>Types: </div>
+                        <div>Subtypes: </div>
+                        <div>Rarity: </div>
+                        <div>Set Code: </div>
+                        <div>Set Name: </div>
+                        <div>Card Text: </div>
+                        <div>Flavor Text: </div>
+                        <div>Power: </div>
+                        <div>Toughness: </div>
+                    </div>
+                    
+                    <div class="fields">
+                        <div><input v-model="name" type="text" id="cardName" placeholder="Charging Badger"></div>
+                        <div><input v-model="cmc" type="text" id="cmc" placeholder="3"></div>
+                        <div><input v-model="colors" type="text" id="cardColors" placeholder="green,blue OR green|blue"></div>
+                        <div><input v-model="supertypes" type="text" id="supertype" placeholder="Legendary"></div>
+                        <div><input v-model="types" type="text" id="cardType" placeholder="Creature"></div>
+                        <div><input v-model="subtypes" type="text" id="subtype" placeholder="Badger"></div>
+                        <div><input v-model="rarity" type="text" id="rarity" placeholder="Mythic Rare"></div>
+                        <div><input v-model="setCode" type="text" id="setCode" placeholder="RTR"></div>
+                        <div><input v-model="setName" type="text" id="setName" placeholder="Return to Ravnica"></div>
+                        <div><input v-model="cardText" type="text" id="cardText" placeholder="Trample OR Lifelink"></div>
+                        <div><input v-model="flavorText" type="text" id="flavorText" placeholder="Lord of the Beasts"></div>
+                        <div><input v-model="power" type="text" id="power" placeholder="4"></div>
+                        <div><input v-model="toughness" type="text" id="toughness" placeholder="4"></div>
+                    </div>
+                </div>
+                <div id="confirm"><input id="searchButton" @click="cardSearch()" type="submit" value="Search"></div>
+            </form>
+            <div class="cardDisplay">
+                <p>Card Display</p>
+                <p v-if="loading">Please Wait...</p>
+                <div class="cardList">
+                    <div v-for="card in json.cards">
+                        <img :src="card.imageUrl" class="singleCard">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="footer-text">GitHub repository:
+                <a href="https://github.com/ArkenStorm/260-Creative-2">Creative Project 2</a>
+            </p>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script type="text/javascript" src="mtg.js"></script>
+    </body>
+</html>

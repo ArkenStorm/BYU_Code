@@ -1,0 +1,29 @@
+Expression: 3 $ 3
+     Infix: Caught exception: NOT Infix: Illegal Operator
+
+Expression: -
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 21 +
+     Infix: Caught exception: NOT Infix: Missing Operators
+
+Expression: + 7 1
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 4 % 2 -
+     Infix: Caught exception: NOT Infix: Missing Operators
+
+Expression: * 5
+     Infix: Caught exception: NOT Infix: Missing Operands
+
+Expression: 12 7 /
+     Infix: Caught exception: NOT Infix: Missing Operators
+
+Expression: 3 5 * 2 +
+     Infix: Caught exception: NOT Infix: Missing Operators
+
+Expression: 43 + 2 * 19 +
+     Infix: Caught exception: NOT Infix: Missing Operators
+
+Expression: 1 * ( 2 + 3 ) / % 4
+     Infix: Caught exception: NOT Infix: Missing Operands

@@ -1,0 +1,13 @@
+1. What design principles does this code violate?
+    Violates Design Commandment #1 - it's too complex!
+2. Refactor the code to improve its design.
+
+boolean highScore = score > 700
+boolean lowScore = score > 500
+boolean standardIncome = (income >= 40000) && (income <= 100000)
+boolean highIncome = income > 100000
+
+if (highScore || (standardIncome && authorized && lowScore) || highIncome)
+   accept();
+else
+   reject();

@@ -1,0 +1,92 @@
+Add 10
+Add 5
+Add 15
+Add 3
+Add 13
+Add 1
+Add 11
+Add 2
+Add 12
+Add 7
+Add 17
+Add 9
+Add 19
+Add 8
+Add 18
+Add 0
+Add 20
+Add 4
+Add 14
+Add 6
+Add 16
+PrintBST
+Find 16
+Find 17
+Find 0
+Find 6
+Find 27
+Tree
+Remove 10
+PrintBST
+Tree
+Remove 9
+PrintBST
+Tree
+Remove 8
+PrintBST
+Tree
+Remove 7
+PrintBST
+Tree
+Remove 6
+PrintBST
+Tree
+Remove 5
+PrintBST
+Tree
+Remove 4
+PrintBST
+Tree
+Remove 3
+PrintBST
+Tree
+Remove 2
+PrintBST
+Tree
+Remove 1
+PrintBST
+Tree
+Remove 0
+PrintBST
+Tree
+Remove 15
+PrintBST
+Tree
+Remove 14
+PrintBST
+Tree
+Remove 13
+PrintBST
+Tree
+Remove 12
+PrintBST
+Tree
+Remove 11
+PrintBST
+Tree
+Remove 17
+PrintBST
+Tree
+Remove 16
+PrintBST
+Tree
+Remove 19
+PrintBST
+Tree
+Remove 18
+PrintBST
+Tree
+Remove 20
+PrintBST
+Find 20
+Tree

@@ -1,0 +1,66 @@
+HW 5
+
+Part 1:
+1) 
+USER       PID  PPID NLWP   LWP S CMD
+arken      302   250    1   302 S echoserveri
+
+2) Only one process and one thread are running, because there is no concurrency, the server is only set up to accept one connection at a time.
+
+3) Once the first nc was stopped, the second nc connection "went through" and got the expected behavior from the server.
+
+
+Part 2:
+4) 
+USER       PID  PPID NLWP   LWP S CMD
+arken      370   250    1   370 S echoserverp
+arken      372   370    1   372 S echoserverp
+arken      374   370    1   374 S echoserverp
+arken      376   370    1   376 S echoserverp
+
+5) There are 4 processes running, but still only one thread per process. This is because using fork() does not start a new thread, but simply starts a new child process. This server is set up to create a new process and thread for each connection.
+
+
+Part 3:
+6)
+USER       PID  PPID NLWP   LWP S CMD
+arken      381   250    4   381 S echoservert
+arken      381   250    4   383 S echoservert
+arken      381   250    4   385 S echoservert
+arken      381   250    4   387 S echoservert
+
+7) There is only one process running, but there are 4 threads in that process. In the server code, every time a connection is made, a new thread is created as well to free up the listening socket.
+
+
+Part 4:
+8)
+USER       PID  PPID NLWP   LWP S CMD
+arken      418   250   11   418 S echoservert_pre
+arken      418   250   11   419 S echoservert_pre
+arken      418   250   11   420 S echoservert_pre
+arken      418   250   11   421 S echoservert_pre
+arken      418   250   11   422 S echoservert_pre
+arken      418   250   11   423 S echoservert_pre
+arken      418   250   11   424 S echoservert_pre
+arken      418   250   11   425 S echoservert_pre
+arken      418   250   11   426 S echoservert_pre
+arken      418   250   11   427 S echoservert_pre
+arken      418   250   11   428 S echoservert_pre
+
+9) There is only one process running, but there are 11 threads. 10 working threads are created in addition to the main thread, which is why there are 11, and they are all created at the beginning to create the "thread pool."
+
+
+Part 5:
+10) A pro for process-based concurrency is that everything is very separated, traceable, and well-defined such that no process can accidentally interact with each other. That is a double-edged sword though, as that means there you have to use explicit "interprocess communication" methods to share data, which have a high overhead.
+
+11) A pro for normal thread-based concurrency is the fact that data can be easily shared between threads, but the downside is that you have to be very careful about when each thread will execute, and it can be hard to separate them and/or debug.
+
+12) The thread pool is convenient because you know exactly how many threads there will be, where they are, and how they will be used, but a downside is the fixed amount of created threads. If you use less than the created amount, you have wasted space, and if you end up needing more, you're out of luck.
+
+13) The call to sbuf_insert() represents the producer role. There is only one producer thread.
+
+14) The call to sbuf_remove() represents the consumer role. There are 10 consumer threads, since that is how many threads are created for the thread pool.
+
+15) The thread will be suspended until slots is nonzero and the thread is restarted by sem_post().
+
+16) sem_post() will be executed by a producer to wake up the thread.

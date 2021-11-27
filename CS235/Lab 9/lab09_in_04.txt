@@ -1,0 +1,92 @@
+Pokemon:
+Electrode electric
+Rhydon rock
+Togepi normal
+Arcanine fire
+Houndoom dark
+Lapis ice
+Giratina ghost
+Heracross bug
+Salamence dragon
+Mew psychic
+Skarmory steel
+Lucario fighting
+Magicarp water
+Jigglypuff fairy
+Pidgey flying
+Venasaur grass
+Koffing poison
+Sandshrew ground
+
+Moves:
+leech_life bug
+pursuit dark
+dragon_breath dragon
+shock_wave electric
+sweet_kiss fairy
+focus_punch fighting
+incinerate fire
+peck flying
+phantom_force ghost
+leaf_blade grass
+dig ground
+ice_beam ice
+thrash normal
+smog poison
+confusion psychic
+rock_tomb rock
+gyro_ball steel
+splash water
+
+Effectivities:
+normal:
+fire: grass ice bug steel
+water: fire ground rock
+electric: water flying
+grass: water ground rock
+ice: grass ground flying dragon
+fighting: normal ice rock dark steel
+poison: grass fairy
+ground: fire electric poison rock steel
+flying: grass fighting bug
+psychic: fighting poison
+bug: grass psychic dark
+rock: fire ice flying bug
+ghost: psychic ghost
+dragon: dragon
+dark: psychic ghost
+steel: ice rock fairy
+fairy: fighting dragon dark
+
+Ineffectivities:
+normal: rock ghost steel
+fire: fire water rock dragon
+water: water grass dragon
+electric: electric grass ground dragon
+grass: fire grass poison flying bug dragon steel
+ice: fire water ice steel
+fighting: poison flying psychic bug ghost fairy
+poison: poison ground rock ghost steel
+ground: grass flying bug
+flying: electric rock steel
+psychic: psychic dark steel
+bug: fire fighting poison flying ghost steel fairy
+rock: fighting ground steel
+ghost: normal dark
+dragon: steel fairy
+dark: fighting dark fairy
+steel: fire water electric steel
+fairy: fire ground steel
+
+Battles:
+Electrode: shock_wave Koffing: smog
+Arcanine: thrash Magicarp: splash
+Sandshrew: rock_tomb Skarmory: peck
+Jigglypuff: sweet_kiss Salamence: confusion
+Mew: gyro_ball Lapis: ice_beam
+Rhydon: dig Lucario: focus_punch
+Pidgey: peck Giratina: pursuit
+Houndoom: phantom_force Heracross: leech_life
+Venasaur: leaf_blade Togepi: dragon_breath
+Arcanine: incinerate Venasaur: smog
+Rhydon: rock_tomb Togepi: thrash

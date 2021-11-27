@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="lifeStoryLines"
+        app:title="Life Story Lines"
+        app:summary="Show Life Story Lines"/>
+    <SwitchPreferenceCompat
+            app:key="familyTreeLines"
+            app:title="Family Tree Lines"
+            app:summary="Show Family Tree Lines"/>
+    <SwitchPreferenceCompat
+            app:key="spouseLines"
+            app:title="Spouse Lines"
+            app:summary="Show Spouse Lines"/>
+    <SwitchPreferenceCompat
+            app:key="fatherSide"
+            app:title="Father's Side"
+            app:summary="Filter by father's side of the family"/>
+    <SwitchPreferenceCompat
+            app:key="motherSide"
+            app:title="Mother's Side"
+            app:summary="Filter by mother's side of the family"/>
+    <SwitchPreferenceCompat
+            app:key="male"
+            app:title="Male Events"
+            app:summary="Show only Male events"/>
+    <SwitchPreferenceCompat
+            app:key="female"
+            app:title="Female Events"
+            app:summary="Show only Female events"/>
+    <Preference
+        app:key="logout"
+        app:title="Logout"
+        app:summary="Return to login screen"/>
+
+</PreferenceScreen>

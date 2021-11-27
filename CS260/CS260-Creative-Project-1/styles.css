@@ -1,0 +1,99 @@
+.brand-image {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #33b054;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #16c1db;
+}
+
+#home {
+    background-image: url("/CS260-Creative-Project-1/images/ymountain.jpg");
+    background-size: 100% 110%;
+    height: calc(100vh - 96px);
+}
+
+.recommended {
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    margin-bottom: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    border-style: solid;
+    border-color: #39b535;
+    border-width: 10px;
+    margin-bottom: 40px;
+}
+
+.description {
+    text-align: center;
+}
+
+.description-photos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reviews {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.review-list {
+    width: 50%;
+}
+
+.homepage-photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.homepage-photo {
+    cursor: pointer;
+    max-width: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 5px;
+}
+
+.photo-limiter {
+    max-width: 500px;
+}
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+.portfolio {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}

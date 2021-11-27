@@ -1,0 +1,48 @@
+# Taylor Whitlock
+# Section 001
+# taylorw1
+
+.pos 0
+irmovq stack, %rsp
+call main
+halt
+
+.align 8
+src:
+	.quad 0x00a
+	.quad 0x0b0
+	.quad 0xc00
+dest:
+	.quad 0x111
+	.quad 0x222
+	.quad 0x333
+
+main:
+	irmovq $0, %rax		# result = 0
+	irmovq src, %rdi	# get source
+	irmovq dest, %rsi	# get destination
+	irmovq $3, %rdx		# length = 3
+	irmovq $1, %r9		# constant 1
+	irmovq $8, %r10		# constant 8
+	call copy_block
+	ret
+
+copy_block:
+	andq %rdx, %rdx		# set condition codes
+	jmp test
+loop:
+	mrmovq (%rdi), %r8	# val = *src
+	addq %r10, %rdi		# src++
+	rmmovq %r8, (%rsi)	# *dest = val
+	addq %r10, %rsi		# dest++
+	xorq %r8, %rax		# result ^= val
+	subq %r9, %rdx		# len--
+	andq %rdx, %rdx
+test:
+	jne loop
+	ret
+
+.pos 0x200
+stack:
+
+

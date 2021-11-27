@@ -1,0 +1,46 @@
+Part 1:
+Level 1:
+	export BANDIT_LEVEL=1 && ./level1
+	6/Q2LbNWe5a4KTk8ymUVrKuQ2J8B+/2+
+	
+Level 2:
+	./level2 2> /dev/null
+	4utUC/pa/7fK5zU0Q3qPKPbmicmozKSc
+	
+Level 3:
+	grep ^eget level3.txt | cut -f2 -d' '
+	WvmlqTFW+sn+TgJD9nEifb2cFNaDYaL3
+	
+Level 4:
+	sort -d level4.txt | tail -1 | base64 -d
+	eAyRe5KDtiqxDoeqVCABnj6hBMhCR/Bd
+	
+Level 5:
+	dig txt bandit.cs324.internet-measurement.cs.byu.edu +short | md5sum | cut -b -32
+	d9addec2125e48f5a24be719eb35f275
+	
+Level 6:
+	tar -xzOf level6.tar.gz | tr F L
+	Jp1NL6O/H7uPUesDQ7r1TPLH2oGlTyHn
+	
+Level 7:
+	curl https://imaal.byu.edu/cs324/bandit.txt -s | sha1sum | cut -b -32
+	fb7cf39e8e0becdcd0468863cdc653e6
+	
+Level 8:
+Keystrokes:
+	./level8
+	CTRL Z
+	fg 1
+	
+	Uoux218Rtfi8Eg1UmIfZ9m4NErlTW+d9
+	
+Level 9:
+	sort level9.txt | uniq -dc | sort -n | tail -1 | awk '{print $2}'
+	WWvs5PXxiY81gLjw60+mBccj6bGACwdU
+	
+Part 2:
+	I did all the tmux commands
+	
+Part 3:
+	

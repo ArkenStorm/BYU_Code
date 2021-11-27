@@ -1,0 +1,70 @@
+.brand-image {
+    width: 70px !important;
+    height: 50px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #33b054;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #16c1db;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-image, .about-image {
+    transform: rotate(90deg);
+    width: 400px;
+    height: 300px;
+    margin-top: 100px;
+}
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #028ec9;
+    color: #dde5eb;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+.image-med {
+    width: 400px;
+    height: 300px;
+}
+
+.portrait-image {
+    transform: rotate(90deg);
+    height: 300px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+a.footer-link:link{
+    color: #005c15;
+}
+
+a.footer-link:visited {
+    color: #0a2610;
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:gravity="center"
+              tools:context=".view.main.startup.RegisterFragment" android:orientation="vertical">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
+                  android:orientation="vertical"
+                  android:layout_marginBottom="20dp">
+        <ImageView android:layout_width="100dp" android:layout_height="200dp"
+                   android:id="@+id/profileIcon"
+                   android:layout_gravity="center"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="@string/edit_photo"
+                  android:textColor="@color/colorAccentText"
+                  android:id="@+id/editPhoto"
+                  android:gravity="center"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginEnd="20dp">
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccentText"
+                        android:inputType="text"
+                        android:id="@+id/registerEmail"
+                        android:hint="@string/email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccentText"
+                        android:inputType="textPassword"
+                        android:id="@+id/registerPassword"
+                        android:hint="@string/password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccentText"
+                        android:inputType="text"
+                        android:id="@+id/registerFirstName"
+                        android:hint="@string/first_name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccentText"
+                        android:inputType="text"
+                        android:id="@+id/registerLastName"
+                        android:hint="@string/last_name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccentText"
+                        android:inputType="text"
+                        android:id="@+id/registerHandle"
+                        android:hint="@string/handle"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                    android:text="@string/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/registerButton"
+                    android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

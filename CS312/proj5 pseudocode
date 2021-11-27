@@ -1,0 +1,9 @@
+Pseudo code for greedy algorithm
+
+initialize set of all nodes
+initialNode = None
+currNode = None
+while set of all nodes is not empty
+	pop off a node and store in initialNode if None, also mark as visited
+	find neighbor of node with lowest cost, pop it if not visited and update currNode
+	add to total cost

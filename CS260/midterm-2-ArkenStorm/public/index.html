@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- User html -->
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Midterm 2</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1 class="heading">Shopping Interface</h1>
+    <h1 class="heading">Current Products</h1>
+    <div v-for="product in products" class="listItem">
+        <input type="checkbox" v-model="purchased[product._id]"> {{product.name}} - price {{product.price}} <img :src="product.imageURL" class="image">
+    </div>
+    <button @click="purchaseProducts()">Submit Purchase</button>
+    <h1 class="heading">Shopping Cart</h1>
+    <div v-for="item in cart">
+        {{item.name}} - price {{item.price}} <img :src="item.imageURL" class="image">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="footer">
+    <a href="admin.html">Admin</a>
+  </div>
+  
+  <div class="gitfooter">
+      <p class="footer-text">GitHub repository:
+          <a href="https://github.com/BYUCS260/midterm-2-ArkenStorm">Midterm 2</a>
+      </p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="user.js"></script>
+</body>
+
+</html>

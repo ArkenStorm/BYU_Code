@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Comments</title>
+</head>
+
+<body>
+  <div id="app">
+    <form @submit.prevent="addComment">
+        <input type="text" v-model="newComment">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <li v-for="item in sortedComments">
+            <span class="glyphicon glyphicon-thumbs-up" @click="incrementUpvotes(item)"></span> {{item.title}} - upvotes: {{item.upvotes}}
+        </li>
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="javascripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.all-tiles {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.game-tile {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: #1C3D5A;
+    border-radius: 10px;
+    border: 2px solid #3D4852;
+}
+
+.game-image {
+    margin: 10px;
+    width: 250px;
+    height: 150px;
+}
+
+.game-title {
+    justify-content: center;
+    margin-top: 5px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid white;
+}

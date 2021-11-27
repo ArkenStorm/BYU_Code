@@ -1,0 +1,93 @@
+Part 1:
+	1) socket() and connect()
+	2) ./server 8000
+	3)
+		a) netstat -lunp 2>&1 | grep 8000
+		b) udp	0	0 0.0.0.0:8000	0.0.0.0:*	2019/./server
+		c) It describes what protocol it's using (udp here), what the local address is, and what the foreign address is, aka the listening port and the client port, along with the program name.
+	4)
+		a) ./client xwing.cs.byu.edu 8000 foo bar baz catvideo
+		b)  Sent 3 bytes to server
+			Received 4 bytes: foo
+			Sent 3 bytes to server
+			Received 4 bytes: bar
+			Sent 3 bytes to server
+			Received 4 bytes: baz
+			Sent 8 bytes to server
+			Received 9 bytes: catvideo
+	5) 
+		a) 4 calls to write are made
+		b) All datagrams have been received before recvfrom() is called the 2nd time
+		c) 4 calls to recvfrom() are required
+		d) the server is simply reading from the socket one call at a time, so that's where the bottleneck/inefficiency would be.
+	6) The original socket was in completely in charge of communication between the client and the server, the new socket just connects the two and the server handles communication instead.
+	7) The call didn't change, but it changed from a udp to tcp socket so it is behaving differently behind the scenes.
+	8) 
+		a) netstat -ltnp 2>&1 | grep 8000
+		b) tcp6       0      0 :::8000                 :::*                    LISTEN      28368/./server
+		c) It shows much of the same information as 3c, the protocol has changed to tcp, and there is now a state, which is currently LISTEN.
+	9)
+		a) ./client xwing.cs.byu.edu 8000 foo bar baz catvideo
+		b)  Sent 3 bytes to server
+			Received 4 bytes: foo
+			Sent 3 bytes to server
+			Received 4 bytes: bar
+			Sent 3 bytes to server
+			Received 4 bytes: baz
+			Sent 8 bytes to server
+			Received 9 bytes: catvideo
+	10)
+		a) netstat -tnp 2>&1 | grep 8000
+		b) tcp        0      0 192.168.2.35:8000       192.168.2.152:42828     ESTABLISHED 29090/./server
+		c) the local/foreign addresses have been identified and a connection has been established. The first address is the local end and the second is the foreign(client) end.
+		
+	11)
+		a) netstat -tnp 2>&1 | grep 8000
+		b) tcp        0      0 192.168.2.35:8000       192.168.2.152:42920     CLOSE_WAIT  29607/./server
+		c) Everything is the same as 10c roughly but the state is now CLOSE_WAIT, which means the socket is in the process of closing, but isn't fully closed yet.
+	12)
+		a) It is still making 4 calls to write
+		b) All of the bytes have been received before the second call to recv()
+		c) Just one call to recv() is required.
+		d) Because of the nature of TCP and recv(), only the one call is needed since it opens a continuous connection instead of a "one-and-done" gate, so to speak.
+	13)
+		a) nc -l 8000 | sha1sum
+		   0ef39a3f241cdd6552ad131e01afa9171b3dab8d  -
+		b) ./client xwing 8000 < alpha.txt
+	14) 
+		a) ./client www-notls.imaal.byu.edu 80 < http-bestill.txt > bestill.txt
+		b)  Sent 80 bytes to server
+			HTTP/1.1 200 OK
+			Date: Thu, 22 Oct 2020 04:46:10 GMT
+			Server: Apache/2.4.38 (Debian)
+			Content-length: 809
+			Vary: Accept-Encoding
+			Connection: close
+			Content-Type: text/plain
+
+
+			1. Be still, my soul: The Lord is on thy side;
+			With patience bear thy cross of grief or pain.
+			Leave to thy God to order and provide;
+			In ev'ry change he faithful will remain.
+			Be still, my soul: Thy best, thy heav'nly Friend
+			Thru thorny ways leads to a joyful end.
+
+			2. Be still, my soul: Thy God doth undertake
+			To guide the future as he has the past.
+			Thy hope, thy confidence let nothing shake;
+			All now mysterious shall be bright at last.
+			Be still, my soul: The waves and winds still know
+			His voice who ruled them while he dwelt below.
+
+			3. Be still, my soul: The hour is hast'ning on
+			When we shall be forever with the Lord,
+			When disappointment, grief, and fear are gone,
+			Sorrow forgot, love's purest joys restored.
+			Be still, my soul: When change and tears are past,
+			All safe and blessed we shall meet at last.
+	15) ./client www-notls.imaal.byu.edu 80 < http-socket.txt | ./strip_http.py > socket.jpg
+	16) Calling read or recv with no data will cause them to return zero and continue.
+	17) Specifying a length that is more than the number of bytes ready to be read will make read or recv do as much as they can and just return
+	18) It will only read that many bytes, causing a short read.
+	19) It will only read that many bytes, but the remaining bytes will still be left in the buffer to be read at the programmer's discretion.

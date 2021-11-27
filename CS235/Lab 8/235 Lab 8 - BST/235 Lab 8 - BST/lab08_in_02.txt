@@ -1,0 +1,56 @@
+PrintBST
+Add 6
+Add 66
+Add 666
+Add 6666
+Add 66666
+Add 666666
+Add 5
+Add 55
+Add 555
+Add 5555
+Add 55555
+Add 4
+Add 44
+Add 444
+Add 4444
+Add 3
+Add 33
+Add 333
+Add 2
+Add 22
+Add 1
+PrintBST
+Remove 22
+Remove 33
+Remove 44
+Remove 55
+Remove 66
+Remove 6
+PrintBST
+Remove 5
+PrintBST
+Remove 444
+Remove 555
+Remove 666
+PrintBST
+Remove 6666
+PrintBST
+Remove 55555
+Remove 66666
+PrintBST
+Remove 333
+Remove 444
+Remove 555
+Remove 666
+PrintBST
+Remove 5555
+PrintBST
+Remove 4
+Remove 3
+Remove 2
+Remove 1
+PrintBST
+Remove 4444
+Remove 666666
+PrintBST
