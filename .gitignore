@@ -232,6 +232,7 @@ __pycache__
 .vs
 node_modules
 package-lock.json
+venv
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio
