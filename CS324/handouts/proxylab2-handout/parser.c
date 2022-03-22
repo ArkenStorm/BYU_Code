@@ -32,7 +32,7 @@ int parse_request(const char *request, char *method, char *hostname, char *port,
 
 	char *req_ptr;
 	strcpy(method,strtok_r(request_line," ",&req_ptr));  // Obtains the GET from the 1st request line
-	
+
 	char url[1024];
 	strcpy(url,strtok_r(NULL," ",&req_ptr));  // obtains the URL - req_ptr helps the tokenizer continue from the last call
 
@@ -45,8 +45,8 @@ int parse_request(const char *request, char *method, char *hostname, char *port,
 
 	char *url_ptr;
 	strcpy(hostname, strtok_r(url,"/", &url_ptr)); // pull out the host name and optional port
-	
-    char *port_ptr = strchr(hostname, ':');
+
+	char *port_ptr = strchr(hostname, ':');
 	if (port_ptr != NULL) {
 		strcpy(port, port_ptr + 1);
 	}
@@ -55,7 +55,7 @@ int parse_request(const char *request, char *method, char *hostname, char *port,
 	}
 
 	char *host_ptr;
-    strtok_r(hostname, ":", &host_ptr); // just the hostname, not the port too
+	strtok_r(hostname, ":", &host_ptr); // just the hostname, not the port too
 
 	// after parsing the first line
 	while ((request_line = strtok(NULL,"\r\n")) != NULL) { // get subsequent lines until it returns NULL
